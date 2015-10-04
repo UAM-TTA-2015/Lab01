@@ -10,4 +10,4 @@ Dowiemy się dlaczego warto testować aplikacje oraz w jaki sposób się do tego
 Omówimy również plan na następne zajęcia oraz co należy zrobić aby dostać zaliczenie z przedmiotu.
 
 ###Materiały
-* Prezentacja: TODO
+* Prezentacja: [Wprowadzenie](Wprowadzenie.md)
