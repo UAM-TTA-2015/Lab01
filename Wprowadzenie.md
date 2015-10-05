@@ -24,32 +24,37 @@
 
 ## Poziomy testów
 * Testy jednostkowe
-  * TODO
+  * Testy weryfikujące poprawne działanie małych jednostek kodu - funkcji, rzadziej całych klas.
+  Weryfikacja polega tutaj na sprawdzaniu czy dla danego stanu wejściowego kod będacy przedmiotem testu 
+  "wyprodukuje" oczekiwany stan wyjściowy lub
+  zakończy działanie oczekiwanym przez nas błędem. Zewnętrzne zależności zastąpione są tutaj przez 'mocki' oraz 'stuby'.
 * Testy integracyjne
-  * TODO
+  * Weryfikują współpracę różnych komponentów systemu. Od testownia interakcji pomiędzy dwoma klasami do integracji z zewnętrznymi komponentam - takimi jak na przykład bazy danych.
+  W przypadku testów integracyjnych, zamiast korzystać z testowych zemienników zewnętrznych zależności, wykorzystuje się ich prawdziwe implementacje.
 * Testy interfejsów
-  * TODO
+  * Polegają na weryfikacji działania interfejsów będących punktami styku pomiędzy testowanym system, a użytkownikiem (wtedy interfjsem jest GUI) lub innymi systami (interfejsem jest API). 
 * Testy systemowe
-  * TODO
+  * Testowanie całościowe w pełni zintegrowanego systemu mające na celu weryfikację funkcjonalnych jak i niefunkcjonalnych wymagań specyfikacji systemu.
+  Nie powinny wymagać żadnej wiedzy na temat wewnętrznych szczegółów dotyczących działania testowanego systemu - tzw. black-box testing.
 * Testy akceptacyjne
-  * TODO
+  * Testy wymagane w celu uzyskania potwierdzenia spełniania przez system określonego progu jakościowego - podzbiór testów systemowych.
 
 ## Typy testów
 * Testy deweloperskie
-  * TODO
+  * Całość testów tworzonych przez zespół programistyczny w czasie implementacji systemu. Skupiają się na możliwie szybkim odnajdywaniu błędów, zanim  te zdołają dotrzeć do zespołu QA.
 * Testy regresyjne
-  * TODO
+  * Testy mające na celu wykrycie czy we wcześniej zaimplementowanych, oddanych i przetestowanych częściach oprogramowania nie pojawiają się nowe błędy mogące być wynikem zmian konfiguracji, 
+  refactoringu czy innych prac zespołu programistycznego.
 * Testy eksploracyjne
-  * TODO
+  * Forma testów łącząca w sobie kilka czynności wykonywanych na raz przez zespół testerrski. Łączy w sobie spontaniczną naukę działania systemu, tworzenia przypadków testowych na bazie zdobytych doświadczeń, a następnie
+  odtwarzanie tych przypadków w celu zweryfikowania działania systemu.
 * Testy funkcjonalne i niefunkcjonalne
-  * TODO
-* Testy wydajnościowe
-  * TODO
+  * Testy funkcjonalne w dużym uproszczeniu sprawdzają zgodność systemu z wymaganiami biznesowymi definiujący jego oczekiwane działanie - czyli CO system robi.
+  Testy niefunkcjonalne, sprawdzają JAK system to robi, czyli czy na przykład działa wydajnie, czy wytrzymuje duże obciążenie itd.
 * Testy bezpieczeństwa
-  * TODO
+  * Sprawdzają czy w obszarach aplikacji takich autoryzacja, autentykacja czy dostępność nie występują błędy.
 * Testy użyteczności i dostępności
-  * TODO
-* ...
+  * Testy z aktywnym udziałem użytkowników aplikacji mające na celu obserwowanie ich zachowań, nawyków oraz prób przy korzystaniu z testowanego systemu.
 
 ## Co testować?
 * Wszystko! A tak na prawdę...
@@ -95,7 +100,7 @@
   * TODO
 
 ## Pomocne metodyki
-* TDD – Test Driven Development – na poziomie testowania kodu, wymusza testowalność 
+* TDD – Test Driven Development – na poziomie testowania kodu, wymusza testowalność
 * BDD – Behaviour Driven Development – na poziomie testowania wymagań
 * Metodyki Agile (Scrum, Kanban, XP i inne) – krótkie cykle i częsta weryfikacja wymagań pozwalają na wcześniejsze eliminowanie błędów i minimalizowanie strat
 * Dobre praktyki programowania (np. SOLID dla OOP)
@@ -105,13 +110,13 @@
 ## Pomocne narzędzia i nie tylko
 * Frameworki do testów jednostkowych i nie tylko - MS Test, NUnit, xUnit, FsCheck
 * Frameworki do testów UI - Selenium, MS UI Automation, Gherkin, SpecFlow
-* Frameworki do testów wydajnościowych - TODO
-* Narzędzia do Continous Integration (CI, build server) - TeamCity, TFS, Bamboo, Jenkins, 
+* Frameworki do testów wydajnościowych - profilery, Visual Studio Testing Tools and Services
+* Narzędzia do Continous Integration (CI, build server) - TeamCity, TFS, Bamboo, Jenkins,
 * Systemy zarządzania ticketami - Jira, Bugzilla, Mantis, GitHub, BitBucket
 * Środowiska testowe (dla bardziej rozbudowanych aplikacji, np. typu klient-serwer)
-* Dokumentacja wymagań - specyfikacje funkcjonalne, user story, TODO
-* Narzędzia do analizy jakościu kodu - StyleCop, FxCop, Gandarme, Sonar 
-* Dobre nawyki podczas tworzenia systemu - TODO
+* Dokumentacja wymagań - specyfikacje funkcjonalne, user story, BPMN
+* Narzędzia do analizy jakościu kodu - StyleCop, FxCop, Gandarme, Sonar
+* Dobre nawyki podczas tworzenia systemu - nietolerowanie warningów, ustalanie konwencji i wpólnych standardów jakościowych,
 * Specjaliści od QA (Quality Assurance - testerzy) w zespole
 * Dobra komunikacja i współpraca z Klientem
 
