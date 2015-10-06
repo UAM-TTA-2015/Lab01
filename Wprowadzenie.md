@@ -50,7 +50,7 @@
   odtwarzanie tych przypadków w celu zweryfikowania działania systemu.
 * Testy funkcjonalne i niefunkcjonalne
   * Testy funkcjonalne w dużym uproszczeniu sprawdzają zgodność systemu z wymaganiami biznesowymi definiujący jego oczekiwane działanie - czyli CO system robi.
-  Testy niefunkcjonalne, sprawdzają JAK system to robi, czyli czy na przykład działa wydajnie, czy wytrzymuje duże obciążenie itd.
+  * Testy niefunkcjonalne, sprawdzają JAK system to robi, czyli czy na przykład działa wydajnie, czy wytrzymuje duże obciążenie itd.
 * Testy bezpieczeństwa
   * Sprawdzają czy w obszarach aplikacji takich autoryzacja, autentykacja czy dostępność nie występują błędy.
 * Testy użyteczności i dostępności
@@ -75,29 +75,37 @@
 
 ### Testy zautomatyzowane
 * Testy jednostkowe
-  * Dbanie o testowalność kodu – Test Driven Development to Twój przyjaciel
-  * 100% code coverage to nie mit – co nie oznacza że zawsze jest konieczny
-  * TODO
+  * Testy powstają razem z kodem
+  * Konieczne jest dbanie o testowalność kodu – Test Driven Development to Twój przyjaciel
+  * 100% pokrycie kodu testami to nie mit – co nie oznacza że zawsze jest konieczny
+  * Testy odpalane są za każdym razem przed wrzuceniem zmian do repozytorium
+  * Każdy build uruchamia testy
 * Testy integracyjne
   * Czy komponenty potrafią się porozumieć?
   * Czy są odporne na podstawowe „czarne scenariusze”
-  * TODO
+  * Uruchamiane jak najczęściej aby szybko wykryć potencjalne problemy
 * Testy interfejsów
   * Interfejsy programistyczne (API): Czy nasze usługi mają kompletne i działające API?
+    * Powinny być tworzone gdy aplikacja wystawia jakiekolwiek API
   * Interfejsy użytkownika (UI): Czy nasza aplikacja ma działający interfejs użytkownika?
-  * TODO
+    * Wymagają sporego nakładu pracy, ale dobrze napisane pozwalają szybko wychwycić błędy nie wykryte przez inne rodzaje testów
 
 ### Testy manualne
 * Testy eksploracyjne – odkrywają najwięcej błędów w systemie
-  * TODO
+  * Testowanie przez poznawanie - osoba przeprowadzająca test poznaje aplikację, wchodzi w różne jej części i próbuje na różne sposoby z niej korzystać.
+  Może próbować wprowadzać błędne dane, zmieniać wielkość okna, ustawienia systemowe i sprawdzać jak system reaguje.
+  Takie testy pozwalają na odkrycie problemów które nie są objęte standardowym zestawem testów (testy automatyczne, scenariusze testowe). 
 * Testy użyteczności – sprawiają że jakość aplikacji rośnie
-  * TODO
+  * Sprawdzają czy interfejs aplikacji pozwala użytkownikowi korzystać z dostępnych funkcji bez sięgania do instrukcji, sprawdzają czy system chroni użytkownika przed popełnieniem błędów,
+  czy jasno informuje gdy użytkownik popełnij jakiś błąd, itd. 
 * Testy dostępności – nie każdy odbiera aplikację w ten sam sposób
-  * TODO
+  * Takie testy sprawdzają czy każdy potencjalny użytkowik systemu będzie w stanie go obsłużyć. Testowane mogą być np.:
+    * Zachowanie aplikacji z różnymi ustawieniami systemu (wysoki kontrast, większe czcionki)
+    * Współpraca z aplikacjami typu Screen Reader (zamiana tekstu na mowę)
 * Testy akceptacyjne – czy tego właśnie potrzebuje Klient?
-  * TODO
+  * Zazwyczaj opierają się o Plan Testów (scenariusze testowe), który stworzony jest na podstawie wymagań Klienta. Weryfikują czy system dostarcza prawidłowo działające funkcjonalności opisane w wymaganiach.
 * Odpal aplikację i zobacz czy działa!
-  * TODO
+  * Nie wrzucaj niczego do repozytorium zanim nie sprawdzisz czy funkcjonalność którą dodałeś działa prawidłowo i czy nie wpłynęła negatywnie na inne elementy systemu.
 
 ## Pomocne metodyki
 * TDD – Test Driven Development – na poziomie testowania kodu, wymusza testowalność
@@ -105,18 +113,19 @@
 * Metodyki Agile (Scrum, Kanban, XP i inne) – krótkie cykle i częsta weryfikacja wymagań pozwalają na wcześniejsze eliminowanie błędów i minimalizowanie strat
 * Dobre praktyki programowania (np. SOLID dla OOP)
 * Nauka różnych języków i paradygmatów programowania
-* TODO
+* Nauka różnych bibliotek pomocnych w testowaniu
+* Code Review, programowanie w parach - wspomagają tworzenie wysokiej jakości oprogramowania
 
 ## Pomocne narzędzia i nie tylko
 * Frameworki do testów jednostkowych i nie tylko - MS Test, NUnit, xUnit, FsCheck
 * Frameworki do testów UI - Selenium, MS UI Automation, Gherkin, SpecFlow
 * Frameworki do testów wydajnościowych - profilery, Visual Studio Testing Tools and Services
-* Narzędzia do Continous Integration (CI, build server) - TeamCity, TFS, Bamboo, Jenkins,
+* Narzędzia do Continous Integration (CI, build server) - TeamCity, TFS, Bamboo, Jenkins
 * Systemy zarządzania ticketami - Jira, Bugzilla, Mantis, GitHub, BitBucket
 * Środowiska testowe (dla bardziej rozbudowanych aplikacji, np. typu klient-serwer)
 * Dokumentacja wymagań - specyfikacje funkcjonalne, user story, BPMN
 * Narzędzia do analizy jakościu kodu - StyleCop, FxCop, Gandarme, Sonar
-* Dobre nawyki podczas tworzenia systemu - nietolerowanie warningów, ustalanie konwencji i wpólnych standardów jakościowych,
+* Dobre nawyki podczas tworzenia systemu - nietolerowanie warningów, ustalanie konwencji i wpólnych standardów jakościowych
 * Specjaliści od QA (Quality Assurance - testerzy) w zespole
 * Dobra komunikacja i współpraca z Klientem
 
