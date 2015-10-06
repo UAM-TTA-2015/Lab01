@@ -46,7 +46,7 @@
   * Testy mające na celu wykrycie czy we wcześniej zaimplementowanych, oddanych i przetestowanych częściach oprogramowania nie pojawiają się nowe błędy mogące być wynikem zmian konfiguracji, 
   refactoringu czy innych prac zespołu programistycznego.
 * Testy eksploracyjne
-  * Forma testów łącząca w sobie kilka czynności wykonywanych na raz przez zespół testerrski. Łączy w sobie spontaniczną naukę działania systemu, tworzenia przypadków testowych na bazie zdobytych doświadczeń, a następnie
+  * Forma testów łącząca w sobie kilka czynności wykonywanych na raz przez zespół testerski. Łączy w sobie spontaniczną naukę działania systemu, tworzenia przypadków testowych na bazie zdobytych doświadczeń, a następnie
   odtwarzanie tych przypadków w celu zweryfikowania działania systemu.
 * Testy funkcjonalne i niefunkcjonalne
   * Testy funkcjonalne w dużym uproszczeniu sprawdzają zgodność systemu z wymaganiami biznesowymi definiujący jego oczekiwane działanie - czyli CO system robi.
